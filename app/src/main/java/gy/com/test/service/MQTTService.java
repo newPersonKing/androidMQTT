@@ -24,8 +24,8 @@ public class MQTTService extends Service {
     private static MqttAndroidClient client;
     private MqttConnectOptions conOpt;
 
-    //    private String host = "tcp://10.0.2.2:61613";
-    private String host = "tcp://10.10.10.174:1883";
+    //    private String host = "tcp://10.0.2.2:61613";     如果启动的是apache-apollo-1.7.1-windows-distro 那就直接使用 自己生成的服务器中的apollo.xml 中的connector 中tcp 对应的端口号
+    private String host = "tcp://10.10.10.174:1883";/*如果需要 跟后台 联调  启动的服务是activeMQ 那就得选择activemq.xml 中transportConnectors 中mqtt 对应的端口号 */
     private String userName = "admin";
     private String passWord = "password";
     private static String myTopic = "gytopic";
